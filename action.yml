@@ -1,0 +1,21 @@
+name: 'GCP PubSub Github Action'
+description: 'Queue GCP PubSub Message from Github Actions'
+inputs:
+  sa-key: 
+    description: 'Service Account Key'
+    required: true
+  project-id: 
+    description: 'GCP Project ID'
+    required: true
+  pubsub-topic:
+    description: 'PubSub Topic name'
+    required: true
+  message-body: 
+    description: 'PubSub message body'
+    required: true
+runs:
+  using: 'composite'
+  steps:
+    - uses: google-github-actions/setup-gcloud@v0
+    - uses: 'nodejs16'
+      run: 'node index.js'
