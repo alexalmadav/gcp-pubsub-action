@@ -14,14 +14,5 @@ inputs:
     description: 'PubSub message body'
     required: true
 runs:
-  using: 'composite'
-  steps:
-    - name: Setup Google Cloud
-      uses: google-github-actions/setup-gcloud@v0
-    - uses: actions/checkout@main
-    - name: Use Node.js 16
-      uses: actions/setup-node@v2
-      with:
-        node-version: 16
-    - run: 'node index.js'
-      shell: bash
+  using: 'node16'
+  main: 'index.js'
