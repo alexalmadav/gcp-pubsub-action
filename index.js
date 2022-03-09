@@ -15,5 +15,5 @@ async function queueMessage(projectId, topicName, body) {
   const pubsub = new PubSub({ projectId });
   const topic = pubsub.topic(topicName);
 
-  topic.publishMessage({ json: body });
+  topic.publishMessage({ json: JSON.parse(body) });
 }
