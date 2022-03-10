@@ -33,6 +33,7 @@ This action queues a message into a given google cloud pubsub topic
 ## Example usage
 `need to set up gcloud with google-github-actions first`
 
+```
  steps:
     - uses: actions/checkout@v2
     - id: 'auth'
@@ -48,3 +49,4 @@ This action queues a message into a given google cloud pubsub topic
         project-id: gcp-project-id
         pubsub-topic: gcp-pubsub-topic-name
         message-body: '{ "foo": "bar" }'
+```

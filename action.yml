@@ -1,4 +1,7 @@
 name: 'GCP PubSub Github Action'
+branding:
+  color: blue
+  icon: message-square
 description: 'Queue GCP PubSub Message from Github Actions'
 inputs:
   project-id: 
