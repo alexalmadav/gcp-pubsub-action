@@ -43,7 +43,7 @@ This action queues a message into a given google cloud pubsub topic
         project_id: gpc-project-id
     - name: setup gcloud
       uses: 'google-github-actions/setup-gcloud@v0'
-    - uses: actions/gcp-pubsub-action@v1
+    - uses: alexalmadav/gcp-pubsub-action@v1.0.2
       name: queue pubsub message
       with:
         project-id: gcp-project-id
