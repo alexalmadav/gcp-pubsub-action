@@ -1,9 +1,6 @@
 name: 'GCP PubSub Github Action'
 description: 'Queue GCP PubSub Message from Github Actions'
 inputs:
-  sa-key: 
-    description: 'Service Account Key'
-    required: true
   project-id: 
     description: 'GCP Project ID'
     required: true
